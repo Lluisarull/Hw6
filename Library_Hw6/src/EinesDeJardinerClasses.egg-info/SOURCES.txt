@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/EinesDeJardinerClasses.egg-info/PKG-INFO
+src/EinesDeJardinerClasses.egg-info/SOURCES.txt
+src/EinesDeJardinerClasses.egg-info/dependency_links.txt
+src/EinesDeJardinerClasses.egg-info/requires.txt
+src/EinesDeJardinerClasses.egg-info/top_level.txt

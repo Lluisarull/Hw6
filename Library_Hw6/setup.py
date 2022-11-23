@@ -21,7 +21,7 @@ def get_requirements(requirements_path='requirements.txt'):
 # or you can create a variable called __version__ inside the __init__.py from
 # the src/your_library folder that has a string with the version as a string.
 setup(
-    name='EinesDeJardiner',
+    name='EinesDeJardinerClasses',
     version='0.0.1',
     description='This library aims to provide some tools for solving Homework 5 of Computing for Data Science',
     author='Maria Pintos, Javier Roset, Lluisa Rull',
@@ -31,6 +31,6 @@ setup(
     setup_requires=['pytest-runner', 'wheel'],
     url='',
     classifiers=[
-        'Programming Language :: Python :: 3.7.10'
+        'Programming Language :: Python :: 3.9.12'
     ]
 )
