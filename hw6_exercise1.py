@@ -23,16 +23,6 @@ class Patient:
         self.name = name
         self.symptoms = symptoms
 
-patient_1 = Patient('Joan',['febre','tos'])
-patient_2 = Patient('Nuria',['congestió','gastroenteritis'])
-patient_3 = Patient('Marti',['fever', 'cough', 'ansomia'])
-
-print(patient_1.name)
-print(patient_2.name)
-print(patient_3.name)
-print(patient_1.symptoms)
-print(patient_2.symptoms)
-print(patient_3.symptoms)
 
 #
 # 1.2)
@@ -44,9 +34,9 @@ print(patient_3.symptoms)
 # This information should be stored somehow.
 
 
-def add_test(self, test_name:str, test_result:bool):
-    self.test_name = test_name
-    self.test_result = test_result
+    def add_test(self, test_name:str, test_result:bool):
+        self.test_name = test_name
+        self.test_result = test_result
 
 
 #
@@ -69,16 +59,30 @@ def add_test(self, test_name:str, test_result:bool):
 #    ['fever', 'cough', 'anosmia']
 
 
-def has_covid(self):
-    try:
-        if self.test_name == "covid":
-            prob = 0.99 if self.test_result == True else 0.01
-    except AttributeError:
-        prob = 0.05 
-        for i in range(len(self.symptoms)):
-            covid_symptoms = ['fever', 'cough', 'anosmia']
-            if self.symptoms[i] in covid_symptoms:
-                    prob += 0.1
-    return prob
+    def has_covid(self):
+        try:
+            if self.test_name == "covid":
+                prob = 0.99 if self.test_result == True else 0.01
+        except AttributeError:
+            prob = 0.05 
+            for i in range(len(self.symptoms)):
+                covid_symptoms = ['fever', 'cough', 'anosmia']
+                if self.symptoms[i] in covid_symptoms:
+                        prob += 0.1
+        return prob
+
+
+patient_1 = Patient('Joan',['febre','tos'])
+patient_2 = Patient('Nuria',['congestió','gastroenteritis'])
+patient_3 = Patient('Marti',['fever', 'cough', 'anosmia'])
+
+print(patient_1.name)
+print(patient_2.name)
+print(patient_3.name)
+print(patient_1.symptoms)
+print(patient_2.symptoms)
+print(patient_3.symptoms)
+print(patient_2.has_covid())
+
 
 
