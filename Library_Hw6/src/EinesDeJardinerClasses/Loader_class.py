@@ -5,9 +5,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-path="/Users/lluisarull/Desktop/DSDM/Computing_for_Data_Science/Homework_5/sample_diabetes_mellitus_data - sample_diabetes_mellitus_data.csv"
-target="diabetes_mellitus"
-
 class Loader:
     def __init__(self, path, target):
         self.df=pd.read_csv(path)
@@ -20,7 +17,4 @@ class Loader:
         df_test = pd.merge(self.X_test, self.y_test, left_index=True, right_index=True)
         return df_train, df_test
 
-df=Loader(path,target)
-df_train, df_test = df.df_train_test()
-print(df_train)
-print(df_test)
+
