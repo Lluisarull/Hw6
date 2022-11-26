@@ -28,7 +28,6 @@ class age_to_birth_year(Transformer):
         df_copy[column] = birth_year
         return df_copy
 
-
 class heightcm_to_inches(Transformer):
     @staticmethod
     def transform_df(df, column):
