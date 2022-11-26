@@ -20,13 +20,14 @@ from datetime import date
 
 class age_to_birth_year(Transformer):
     @staticmethod
-    def calculate_Birth_Year(df, column):
+    def transform_df(df, column):
         df_copy = df.copy()
         age = df[column]
         today = date.today().year
-        birth_year = today.year - age
+        birth_year = today - age
         df_copy[column] = birth_year
-        return birth_year
+        return df_copy
+
 
 class heightcm_to_inches(Transformer):
     @staticmethod
